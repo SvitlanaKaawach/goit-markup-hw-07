@@ -45,29 +45,35 @@ img {
   padding-top: 94px;
 }
 
+.link {
+  text-decoration: none;
+}
+
+/* -----------HEADER-------------- */
+
 /* Main-nav */
-.main-nav {
+.header__navigation {
   display: flex;
   align-items: center;
 }
 
-/* Header-nav */
+/* Header-navigation */
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.header-nav {
+.header__list {
   display: flex;
   align-items: center;
 }
 
-.header-nav-item {
+.header__item {
   font-weight: 500;
   display: flex;
 }
-.header-nav-link {
+.header__link {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -79,7 +85,7 @@ img {
   position: relative;
 }
 
-.header-nav-link.current::after {
+.header__link.current::after {
   content: "";
 
   position: absolute;
@@ -94,11 +100,11 @@ img {
   background-color: var(--accent-color);
 }
 
-.header-nav-item:not(:last-child) {
+.header__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-nav-link.current,
+.header__link.current,
 .button-filter.current {
   color: var(--accent-color);
 }
@@ -107,7 +113,7 @@ img {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header-logo {
+.header__logo {
   align-items: center;
   margin-right: 93px;
 
@@ -118,30 +124,25 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.header-logo-st {
+.header__logo-span {
   color: #000000;
-}
-/* link-decoration */
-
-.link {
-  text-decoration: none;
 }
 
 /* Header-address */
-.header-icon {
+.contacts__icon {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.address {
+.contacts {
   display: flex;
   margin-left: auto;
 }
 
-.address-item + .address-item {
+.contacts__item + .contacts__item {
   margin-left: 50px;
 }
-.address-link {
+.contacts__link {
   display: flex;
   align-items: center;
 
@@ -156,12 +157,12 @@ img {
 }
 
 /* Accent */
-.header-icon:focus,
-.header-icon:hover,
-.header-nav-link:hover,
-.address-link:hover,
-.header-nav-link:focus,
-.address-link:focus {
+.contacts__icon:focus,
+.contacts__icon:hover,
+.header__link:hover,
+.contacts__link:hover,
+.header__link:focus,
+.contacts__link:focus {
   color: var(--accent-color);
 }
 
@@ -658,8 +659,7 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.address-footer {
-}
+
 .join {
   font-style: normal;
   font-weight: bold;
