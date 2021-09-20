@@ -36,6 +36,7 @@ img {
 a {
   text-decoration: none;
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -50,6 +51,13 @@ a {
 
 .link {
   text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /* -----------HEADER-------------- */
@@ -214,13 +222,7 @@ a {
 }
 
 /* ------------Benefits-section------------- */
-.hidden-title {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
+
 .benefits__list {
   display: flex;
 }
@@ -617,9 +619,12 @@ a {
   background-color: #2f303a;
   padding: 60px 0px;
 }
+.footer-container {
+  display: flex;
+}
 
-/* Logo in footer */
-.logo {
+/*--------------------- Logo in footer-------------------- */
+.footer__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: #2196f3;
@@ -628,7 +633,7 @@ a {
   letter-spacing: 0.03em;
 }
 
-.logo-studio-footer {
+.footer__logo-span {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: var(--main-title-color);
@@ -637,30 +642,32 @@ a {
   letter-spacing: 0.03em;
 }
 
-.footer-contacts:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-/* Address */
+/* -------------footer-address -----------*/
 address {
   font-style: normal;
   margin-top: 20px;
 }
-
-.studio-location {
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-contacts__link {
   color: var(--main-title-color);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.address-link-footer {
+.footer-cotacts__link-contact {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
-.join {
+/* ------------------------JOIN US----------------------------- */
+.join-footer {
+  margin-left: 70px;
+  justify-content: center;
+}
+.join-footer__title {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -671,22 +678,15 @@ address {
   color: #ffffff;
   margin-bottom: 20px;
 }
-.footer-social-link {
+.footer-social-network {
   align-items: baseline;
   display: flex;
 }
-.footer-social-link-list {
-  align-items: baseline;
-  display: flex;
+.footer-social-network + .footer-social-network {
+  margin-left: 10px;
 }
-.address-footer-thumb {
-  flex-grow: 1;
-}
-.social-footer {
-  margin-left: 70px;
-  justify-content: center;
-}
-.footer-link {
+
+.footer-social-network__link {
   display: flex;
   height: 44px;
   width: 44px;
@@ -699,23 +699,21 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-icon {
-  fill: #ffffff;
-}
-.footer-social-list + .footer-social-list {
-  margin-left: 10px;
-}
-.footer-link:hover,
-.footer-link:focus {
+.footer-social-network__link:hover,
+.footer-social-network__link:focus {
   background-color: var(--accent-color);
   color: #ffffff;
 }
-/* join us in footer */
-.contact-wrapper {
+.footer-social-network__icon {
+  fill: #ffffff;
+}
+
+/* ------------------SUBSCRIBE US IN FOOTER-------------- */
+.subscribe {
   margin-left: 93px;
   justify-content: center;
 }
-.online-title {
+.subscribe__title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14em;
@@ -724,8 +722,13 @@ address {
   color: #ffffff;
   margin-bottom: 20px;
 }
-/* email footer form */
-.email-join {
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ----------subscribe-email form---------- */
+.subscribe__email {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.25em;
@@ -742,17 +745,13 @@ address {
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.email-join:focus,
-.email-join:hover {
+.subscribe__email:focus,
+.subscribe__email:hover {
   border: 1px solid var(--accent-color);
 }
-.subscribe-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* join us button */
-.btn-join {
+
+/* ------------subscribe us button-------------- */
+.subscribe__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -775,17 +774,18 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn-join:hover,
-.btn-join:focus {
+.subscribe__button:hover,
+.subscribe__button:focus {
   background-color: #2f303a;
   border: 1px solid #ffffff;
 }
-/* telegram icon footer */
-.email-icon {
+/* -------telegram icon footer -------------*/
+.subscribe__icon {
   margin-left: 10px;
   fill: var(--main-title-color);
 }
-/* backdrop */
+
+/* ---------------BACKDROP FORM-------------------- */
 .backdrop {
   position: fixed;
   width: 100vw;
@@ -816,11 +816,7 @@ address {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-.modal-form {
-  padding: 40px;
-}
-.modal-button {
+.modal-window__button {
   width: 30px;
   height: 30px;
   border: 1px solid #0000001a;
@@ -834,20 +830,23 @@ address {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button:focus .modal-icon,
-.modal-button:hover .modal-icon {
+.modal-window__button:focus .modal-icon,
+.modal-window__button:hover .modal-icon {
   fill: var(--accent-color);
 }
 
-.modal-icon {
+.modal-window__icon {
   fill: #000000;
   width: 11px;
   height: 11px;
 }
 
-/* ----BACKDROP FORM----- */
+/* ----MODAL FORM----- */
+.modal-form {
+  padding: 40px;
+}
 /* modal title */
-.modal-title {
+.modal-form__title {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15em;
@@ -858,11 +857,11 @@ address {
   margin-bottom: 12px;
 }
 
-.modal-form-field {
+.modal-form__field {
   margin-bottom: 10px;
 }
 
-.modal-form-label {
+.modal-form__label {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.17em;
@@ -871,13 +870,13 @@ address {
   margin-bottom: 4px;
 }
 
-.input-wrap {
+.modal-form__wrapper {
   margin-top: 4px;
   display: block;
   position: relative;
 }
 /* modal input */
-.modal-form-input {
+.modal-form__input {
   width: 100%;
   height: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -886,14 +885,14 @@ address {
   padding-left: 40px;
 }
 /* modal icon */
-.modal-form-icon {
+.modal-form__icon {
   position: absolute;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
 /* comment in modal */
-.modal-comment {
+.modal-form__comment {
   margin-top: 4px;
   display: block;
   width: 100%;
@@ -906,21 +905,17 @@ address {
   resize: none;
 }
 
-.modal-comment::placeholder {
+.modal-form__comment::placeholder {
   font-size: 14px;
 }
-.policy-text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71em;
-  letter-spacing: 0.03em;
-  color: #757575;
+
+/*  --------- checkbox icon--------- */
+
+.checkbox:checked + .checkbox__label > .checkbox__icon {
+  background: var(--accent-color);
+  border: 2px solid transparent;
 }
-.policy-agreement {
-  color: #2196f3;
-  text-decoration: underline;
-}
-.check-label {
+.checkbox__label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -928,7 +923,31 @@ address {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-/* send form button */
+.checkbox__icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #ffffff;
+}
+/* ----------------policy text-------------- */
+.checkbox__policy-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.checkbox__policy-agreement {
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+/* ------------send form button------------- */
 .form-btn {
   width: 200px;
   height: 50px;
@@ -946,27 +965,4 @@ address {
   margin: 0 auto;
   cursor: pointer;
   border: 1px solid transparent;
-}
-/*  --------- checkbox sprite--------- */
-.icon-check {
-  width: 16px;
-  height: 15px;
-  border: 2px solid #000000;
-  border-radius: 2px;
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: #ffffff;
-}
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-.checkbox:checked + .check-label > .icon-check {
-  background: var(--accent-color);
-  border: 2px solid transparent;
 }
