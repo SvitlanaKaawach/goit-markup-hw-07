@@ -1,13 +1,13 @@
 .grid {
-  margin-left: calc(-1 * $gallery-set-gap);
-  margin-top: calc(-1 * $gallery-set-gap);
+  margin-left: -30px;
+  margin-top: -30px;
 
   display: flex;
   flex-wrap: wrap;
 }
 
 .grid__item {
-  flex-basis: calc((100% / 3 - $gallery-set-gap));
+  flex-basis: calc((100% / 3 - 180));
   margin-left: $gallery-set-gap;
   margin-top: $gallery-set-gap;
 
