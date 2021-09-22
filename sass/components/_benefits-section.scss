@@ -1,0 +1,11 @@
+.benefits__list {
+  display: flex;
+
+  & li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.benefits__item {
+  width: 270px;
+}
