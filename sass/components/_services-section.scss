@@ -1,7 +1,4 @@
-.services {
-  padding-top: 0px;
-}
-.services__header {
+.section__title {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -11,7 +8,7 @@
   letter-spacing: 0.03em;
   color: $secondary-title-color;
 }
-.services__list {
+.services {
   display: flex;
 }
 
@@ -21,7 +18,7 @@
     margin-right: 30px;
   }
 }
-.services__title-container {
+.services__container {
   position: absolute;
   left: 0;
   bottom: 0;

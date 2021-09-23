@@ -5,10 +5,10 @@
   background-color: #ffffff;
 }
 
-.team {
+.section--another-bg {
   background-color: #f5f4fa;
 }
-.team__title {
+.section__title {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -19,7 +19,7 @@
   color: $secondary-title-color;
 }
 
-.team__list {
+.team {
   display: flex;
 
   margin-left: calc(-1 * $gallery-set-gap);
@@ -38,7 +38,7 @@
 
 /* ------Team members ---------*/
 
-.team-card__name {
+.team-card__title {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -51,7 +51,7 @@
 
 /* -------team-position-------- */
 
-.team-card__position {
+.team-card__text {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;

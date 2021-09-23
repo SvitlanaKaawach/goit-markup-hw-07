@@ -8,11 +8,12 @@
   fill: currentColor;
 }
 
-.sicial-network__item {
+.social-network__item {
   display: flex;
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
+}
+
+.social-network__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-network__link {
